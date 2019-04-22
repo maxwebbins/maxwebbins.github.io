@@ -1,0 +1,65 @@
+body {
+  color: #222; }
+
+a {
+  color: #FF6347; }
+
+p {
+  color: #444; }
+
+.color_elem {
+  color: #FF6347; }
+
+.color_elem_light {
+  color: #777; }
+
+.color_bg {
+  background: #FF6347; }
+
+.color_bg_light {
+  background: #FAFAFA; }
+
+.color_bg_darker {
+  background: #F1F1F1; }
+
+.color_bg_dark {
+  background: #111; }
+  .color_bg_dark * {
+    color: #ddd; }
+  .color_bg_dark .color_title hr {
+    background: #ddd; }
+
+.color_title {
+  color: #333; }
+  .color_title hr {
+    background: #333; }
+
+.color_border {
+  border-color: #FF6347; }
+
+.main_color_bg {
+  background: #222; }
+
+.sidenav_color {
+  background: #FF6347; }
+  .sidenav_color * {
+    color: #fff; }
+  .sidenav_color a:hover {
+    color: #444; }
+
+.portfolio-control li.active {
+  font-weight: bold;
+  border-bottom: 2px solid #FF6347; }
+
+.contact-icon * {
+  color: #FF6347; }
+.contact-form input[type="submit"] {
+  background: #FF6347;
+  color: #fff;
+  border: 2px solid #FF6347;
+  transition: 0.5s; }
+  .contact-form input[type="submit"]:hover {
+    background: #fff;
+    color: #FF6347; }
+
+/*# sourceMappingURL=default.css.map */

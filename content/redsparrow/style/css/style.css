@@ -1,0 +1,686 @@
+@font-face {
+  font-family: "red_sparrow-ubuntu";
+  font-weight: 300;
+  src: url("../../fonts/Ubuntu-Light.ttf"); }
+@font-face {
+  font-family: "red_sparrow-ubuntu";
+  font-weight: 500;
+  src: url("../../fonts/Ubuntu-Regular.ttf"); }
+@font-face {
+  font-family: "red_sparrow-ubuntu";
+  font-weight: 600;
+  src: url("../../fonts/Ubuntu-Medium.ttf"); }
+@font-face {
+  font-family: "red_sparrow-ubuntu";
+  font-weight: bold;
+  src: url("../../fonts/Ubuntu-Bold.ttf"); }
+@keyframes menuAnime {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(150px);
+    -moz-transform: translateX(150px);
+    -ms-transform: translateX(150px);
+    transform: translateX(150px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); } }
+@keyframes tabAnime {
+  0% {
+    -webkit-transform: translateY(-150px);
+    -moz-transform: translateY(-150px);
+    -ms-transform: translateY(-150px);
+    transform: translateY(-150px); }
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0); } }
+* {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font: 16px/16px Arial, sans-serif; }
+
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+input::focus {
+  outline: none; }
+
+input::-ms-clear {
+  display: none; }
+
+textarea {
+  border: none; }
+  textarea::focus {
+    outline: none; }
+
+button {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle; }
+
+hr {
+  width: 100%;
+  margin: auto;
+  border: 0;
+  height: 2px;
+  background: #e7e7e7; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*=================COMMON============= */
+.row {
+  margin-right: 0;
+  margin-left: 0; }
+
+.col {
+  padding-right: 0;
+  padding-left: 0; }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.wrapper {
+  min-width: 320px;
+  max-width: 1920px;
+  min-height: 320px;
+  position: relative;
+  height: 100vh;
+  overflow: hidden; }
+
+.wrapper-page {
+  overflow: hidden;
+  height: auto; }
+  .wrapper-page .container-page {
+    padding: 0 15%; }
+    @media screen and (max-width: 1300px) {
+      .wrapper-page .container-page {
+        padding: 0 10%; } }
+    @media screen and (max-width: 1100px) {
+      .wrapper-page .container-page {
+        padding: 0 5%; } }
+    @media screen and (max-width: 980px) {
+      .wrapper-page .container-page {
+        padding: 0 15%; } }
+    @media screen and (max-width: 480px) {
+      .wrapper-page .container-page {
+        padding: 0 5%; } }
+    .wrapper-page .container-page section {
+      padding: 70px 0; }
+      .wrapper-page .container-page section h2 {
+        font: 600 2.375rem/100% red_sparrow-ubuntu;
+        margin-bottom: 40px; }
+        @media screen and (max-width: 480px) {
+          .wrapper-page .container-page section h2 {
+            font-size: 1.8rem; } }
+
+.menu {
+  position: fixed;
+  z-index: 3;
+  left: 20px;
+  top: 20%; }
+  @media screen and (max-width: 768px), (max-height: 768px) {
+    .menu {
+      display: none; } }
+  .menu-item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 4px;
+    background: #000;
+    cursor: pointer; }
+    .menu-item.active {
+      background: #bb0000; }
+      .menu-item.active .menu-sub {
+        display: block; }
+        .menu-item.active .menu-sub li:nth-of-type(1) {
+          -webkit-animation: menuAnime 0.4s;
+          -moz-animation: menuAnime 0.4s;
+          -ms-animation: menuAnime 0.4s;
+          animation: menuAnime 0.4s; }
+        .menu-item.active .menu-sub li:nth-of-type(2) {
+          -webkit-animation: menuAnime 0.6s;
+          -moz-animation: menuAnime 0.6s;
+          -ms-animation: menuAnime 0.6s;
+          animation: menuAnime 0.6s; }
+        .menu-item.active .menu-sub li:nth-of-type(3) {
+          -webkit-animation: menuAnime 0.8s;
+          -moz-animation: menuAnime 0.8s;
+          -ms-animation: menuAnime 0.8s;
+          animation: menuAnime 0.8s; }
+        .menu-item.active .menu-sub li:nth-of-type(4) {
+          -webkit-animation: menuAnime 1s;
+          -moz-animation: menuAnime 1s;
+          -ms-animation: menuAnime 1s;
+          animation: menuAnime 1s; }
+        .menu-item.active .menu-sub li:nth-of-type(5) {
+          -webkit-animation: menuAnime 1.2s;
+          -moz-animation: menuAnime 1.2s;
+          -ms-animation: menuAnime 1.2s;
+          animation: menuAnime 1.2s; }
+        .menu-item.active .menu-sub li:nth-of-type(6) {
+          -webkit-animation: menuAnime 1.4s;
+          -moz-animation: menuAnime 1.4s;
+          -ms-animation: menuAnime 1.4s;
+          animation: menuAnime 1.4s; }
+    .menu-item.white {
+      background: #fff; }
+      .menu-item.white .menu-title li {
+        color: #000; }
+    .menu-item .menu-title {
+      position: absolute;
+      pointer-events: none;
+      text-align: center;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+      .menu-item .menu-title li {
+        color: #fff;
+        font: bold 0.625rem/120% red_sparrow-ubuntu;
+        text-transform: uppercase;
+        text-align: center; }
+        .menu-item .menu-title li i {
+          display: inline-block;
+          background: url(../../icons/sprite.png) 0 0 no-repeat;
+          width: 40px;
+          height: 40px; }
+          .menu-item .menu-title li i.icon-color {
+            background-position-x: -40px; }
+          .menu-item .menu-title li i.icon-chassis {
+            background-position-x: -80px; }
+          .menu-item .menu-title li i.icon-membrane {
+            background-position-x: -120px; }
+          .menu-item .menu-title li i.icon-glass {
+            background-position-x: -160px; }
+          .menu-item .menu-title li i.icon-photo {
+            background-position-x: -200px; }
+          .menu-item .menu-title li i.icon-map {
+            background-position-x: -240px; }
+    .menu-item .menu-sub {
+      position: fixed;
+      display: none;
+      left: 120px;
+      top: 20%; }
+      .menu-item .menu-sub li {
+        cursor: arrow;
+        text-transform: uppercase;
+        padding: 15px;
+        font: bold 0.8rem/100% red_sparrow-ubuntu;
+        color: #000;
+        background: #fff; }
+
+.menu-right {
+  position: fixed;
+  right: 20px;
+  left: auto; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 20px 0;
+  align-items: center; }
+  header .logo {
+    padding-left: 40px; }
+    @media screen and (max-width: 700px) {
+      header .logo {
+        padding-left: 20px; } }
+  header .map {
+    text-align: right;
+    padding: 0 40px 0 20px;
+    font: 300 1.125rem/120% red_sparrow-ubuntu; }
+    @media screen and (max-width: 700px) {
+      header .map {
+        font: 300 1rem/100% red_sparrow-ubuntu;
+        padding: 0 10px 0 20px;
+        flex-grow: 2; } }
+    header .map ul {
+      display: inline-block; }
+    header .map li {
+      color: #fff;
+      text-align: left; }
+      header .map li i {
+        color: #fff;
+        margin-right: 5px; }
+      header .map li:first-of-type {
+        margin-bottom: 5px; }
+      header .map li:last-of-type a {
+        padding-bottom: 5px;
+        color: #fff;
+        font: bold 0.75rem/100% red_sparrow-ubuntu;
+        text-transform: uppercase;
+        border-bottom: 1px dashed #fff; }
+        header .map li:last-of-type a:hover {
+          border-bottom: none; }
+  header .phone {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-right: 40px; }
+    @media screen and (max-width: 700px) {
+      header .phone {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        display: block;
+        padding-right: 0; } }
+    @media screen and (max-width: 1560px) {
+      header .phone-num {
+        margin-bottom: 10px; } }
+    header .phone-num li {
+      color: #fff; }
+      header .phone-num li:first-of-type {
+        font: bold 2rem/100% red_sparrow-ubuntu; }
+        @media screen and (max-width: 980px) {
+          header .phone-num li:first-of-type {
+            font: bold 1.4rem/100% red_sparrow-ubuntu; } }
+        header .phone-num li:first-of-type i {
+          color: #fff;
+          margin-right: 5px; }
+      header .phone-num li:last-of-type {
+        margin-top: 5px;
+        font: 300 1rem/100% red_sparrow-ubuntu; }
+    header .phone-btn {
+      margin-left: 15px; }
+      header .phone-btn button {
+        color: #fff;
+        background: #bb0000;
+        font: bold 1rem/100% red_sparrow-ubuntu;
+        text-transform: uppercase;
+        border-radius: 100px;
+        padding: 10px 25px;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        transition: 0.3s; }
+        @media screen and (max-width: 980px) {
+          header .phone-btn button {
+            font: bold 0.8rem/100% red_sparrow-ubuntu; } }
+      header .phone-btn:hover > button {
+        color: #bb0000;
+        background: #fff; }
+  header.page {
+    position: static;
+    background: #000; }
+    @media screen and (max-width: 700px) {
+      header.page .phone {
+        display: none; } }
+
+.main {
+  height: 100%;
+  width: 100%; }
+  .main-slider {
+    height: 100%;
+    width: 100%; }
+    .main-slider .content {
+      height: 100%;
+      width: 100%;
+      -webkit-transition: transform 1s;
+      -moz-transition: transform 1s;
+      -ms-transition: transform 1s;
+      transition: transform 1s; }
+    .main-slider .item {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      background: url(../../img/001.jpg) no-repeat 50%;
+      background-size: cover; }
+      .main-slider .item[data-id='1'] {
+        background: url(../../img/005.jpg) no-repeat 50%; }
+      .main-slider .item[data-id='2'] {
+        background: url(../../img/002.jpg) no-repeat 50%; }
+      .main-slider .item[data-id='3'] {
+        background: url(../../img/003.jpg) no-repeat 50%; }
+      .main-slider .item[data-id='4'] {
+        background: url(../../img/004.jpg) no-repeat 50%; }
+      .main-slider .item[data-id='5'] {
+        background: url(../../img/001.jpg) no-repeat 50%; }
+      .main-slider .item-details {
+        position: absolute;
+        bottom: 4.5%;
+        left: 12%; }
+        @media screen and (max-width: 700px) {
+          .main-slider .item-details {
+            left: 2%; } }
+        .main-slider .item-details a {
+          display: flex;
+          align-items: center;
+          color: #fff;
+          text-transform: uppercase;
+          font: bold 1rem/100% red_sparrow-ubuntu; }
+          @media screen and (max-width: 480px) {
+            .main-slider .item-details a {
+              font: bold 0.8rem/100% red_sparrow-ubuntu; } }
+          .main-slider .item-details a i {
+            color: #fff;
+            margin-right: 15px; }
+            @media screen and (max-width: 480px) {
+              .main-slider .item-details a i {
+                margin-right: 5px; } }
+      .main-slider .item ul {
+        position: absolute;
+        bottom: 4.5%;
+        right: 12%; }
+        @media screen and (max-width: 980px) {
+          .main-slider .item ul {
+            right: 2%; } }
+        .main-slider .item ul li {
+          color: #fff; }
+          @media screen and (max-width: 480px) {
+            .main-slider .item ul li:first-of-type {
+              text-align: right; } }
+          .main-slider .item ul li:first-of-type button {
+            position: relative;
+            color: #bb0000;
+            background: #bb0000;
+            padding: 10px 0;
+            font: 600 3rem/100% red_sparrow-ubuntu; }
+            @media screen and (max-width: 980px) {
+              .main-slider .item ul li:first-of-type button {
+                font: 600 2rem/100% red_sparrow-ubuntu; } }
+            @media screen and (max-width: 600px) {
+              .main-slider .item ul li:first-of-type button {
+                display: none; } }
+            .main-slider .item ul li:first-of-type button:before {
+              content: "";
+              position: absolute;
+              z-index: 0;
+              -webkit-transform: skewX(10deg);
+              -moz-transform: skewX(10deg);
+              -ms-transform: skewX(10deg);
+              transform: skewX(10deg);
+              width: 2rem;
+              bottom: 0;
+              left: -1rem;
+              height: 100%;
+              background: #bb0000; }
+            .main-slider .item ul li:first-of-type button:after {
+              content: "";
+              position: absolute;
+              z-index: 0;
+              -webkit-transform: skewX(10deg);
+              -moz-transform: skewX(10deg);
+              -ms-transform: skewX(10deg);
+              transform: skewX(10deg);
+              width: 2rem;
+              bottom: 0;
+              right: -1rem;
+              height: 100%;
+              background: #bb0000; }
+            .main-slider .item ul li:first-of-type button i {
+              position: absolute;
+              font-style: normal;
+              font: 600 1.75rem/100% red_sparrow-ubuntu;
+              left: 50%;
+              top: 50%;
+              color: #fff;
+              -webkit-transform: translate(-50%, -50%);
+              -moz-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+              @media screen and (max-width: 980px) {
+                .main-slider .item ul li:first-of-type button i {
+                  font: 600 1.4rem/100% red_sparrow-ubuntu; } }
+          .main-slider .item ul li:first-of-type h2 {
+            display: inline-block;
+            padding: 10px 20px 10px 30px;
+            font: 600 3rem/100% red_sparrow-ubuntu;
+            background: #fff;
+            color: #000; }
+            @media screen and (max-width: 980px) {
+              .main-slider .item ul li:first-of-type h2 {
+                font: 600 2rem/100% red_sparrow-ubuntu; } }
+            @media screen and (max-width: 480px) {
+              .main-slider .item ul li:first-of-type h2 {
+                padding: 5px 10px 5px 10px;
+                font: 600 1.4rem/100% red_sparrow-ubuntu; } }
+          .main-slider .item ul li:last-of-type {
+            text-align: right;
+            margin-top: 10px;
+            padding-right: 20px;
+            text-transform: uppercase;
+            font: 300 1rem/100% red_sparrow-ubuntu; }
+            @media screen and (max-width: 480px), (max-height: 400px) {
+              .main-slider .item ul li:last-of-type {
+                display: none; } }
+            .main-slider .item ul li:last-of-type span {
+              color: #fff;
+              font: bold 1.4rem/100% red_sparrow-ubuntu; }
+
+.imgs-box {
+  flex: 48%; }
+  @media screen and (max-width: 768px) {
+    .imgs-box {
+      flex: 100%; } }
+  .imgs-box .image {
+    position: relative;
+    margin-bottom: 50px; }
+    .imgs-box .image-text {
+      position: absolute;
+      background: #fff;
+      bottom: 10%;
+      left: 0;
+      padding: 15px;
+      text-transform: uppercase;
+      font: bold 1.5rem/100% red_sparrow-ubuntu; }
+      .imgs-box .image-text:after {
+        content: "";
+        width: 2rem;
+        height: 100%;
+        position: absolute;
+        right: -1rem;
+        top: 0;
+        background: #fff;
+        -webkit-transform: skewX(15deg);
+        -moz-transform: skewX(15deg);
+        -ms-transform: skewX(15deg);
+        transform: skewX(15deg); }
+  .imgs-box li {
+    font: 300 1.125rem/100% red_sparrow-ubuntu;
+    margin-bottom: 20px; }
+    .imgs-box li:first-of-type {
+      font: 600 1.5rem/100% red_sparrow-ubuntu;
+      margin-bottom: 30px; }
+    .imgs-box li:last-of-type {
+      margin-bottom: 0; }
+    .imgs-box li i {
+      margin-right: 15px; }
+.imgs-before {
+  margin-right: 2%; }
+  @media screen and (max-width: 768px) {
+    .imgs-before {
+      margin-right: 0;
+      margin-bottom: 30px; } }
+.imgs-after {
+  margin-left: 2%; }
+  @media screen and (max-width: 768px) {
+    .imgs-after {
+      margin-left: 0; } }
+
+.prices {
+  position: relative; }
+  .prices-box {
+    position: relative;
+    border-radius: 5px;
+    border-top: 5px solid #bb0000;
+    box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px; }
+    @media screen and (max-width: 980px) {
+      .prices-box {
+        flex: 100%; } }
+    .prices-box.second {
+      border-color: #ffa507;
+      margin: 0 3%; }
+      @media screen and (max-width: 980px) {
+        .prices-box.second {
+          margin: 30px 0; } }
+    .prices-box.last {
+      border-color: #000; }
+    .prices-box .lace {
+      position: absolute;
+      padding: 10px;
+      right: 1%;
+      top: 5%;
+      text-align: center;
+      background: #83c9e6;
+      color: #fff;
+      font: 500 1rem/100% red_sparrow-ubuntu;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.1); }
+      .prices-box .lace:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        left: -2rem;
+        height: 100%;
+        width: 4rem;
+        background: #83c9e6;
+        -webkit-transform: skewX(-45deg);
+        -moz-transform: skewX(-45deg);
+        -ms-transform: skewX(-45deg);
+        transform: skewX(-45deg); }
+      .prices-box .lace:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        right: -2rem;
+        height: 100%;
+        width: 4rem;
+        background: #83c9e6;
+        -webkit-transform: skewX(-135deg);
+        -moz-transform: skewX(-135deg);
+        -ms-transform: skewX(-135deg);
+        transform: skewX(-135deg); }
+    .prices-box .info li {
+      font: 500 1rem/130% red_sparrow-ubuntu;
+      border-bottom: 1px solid #eee;
+      border-top: 1px solid #eee;
+      padding: 10px 0; }
+      .prices-box .info li i {
+        margin-right: 10px; }
+      .prices-box .info li:first-of-type {
+        font: 600 1rem/100% red_sparrow-ubuntu;
+        border: none;
+        padding: 0; }
+      .prices-box .info li:nth-of-type(2) {
+        text-transform: uppercase;
+        font: bold 2.25rem/100% red_sparrow-ubuntu;
+        border: none;
+        margin: 10px 0 40px 0;
+        padding: 0; }
+    .prices-box .price {
+      display: flex;
+      margin-top: 40px; }
+      .prices-box .price div {
+        align-self: flex-end; }
+        .prices-box .price div:first-of-type {
+          font: 300 0.875rem/120% red_sparrow-ubuntu;
+          text-transform: uppercase;
+          margin-right: 2%;
+          text-align: right; }
+        .prices-box .price div:last-of-type {
+          margin-left: 2%;
+          font: bold 1rem/100% red_sparrow-ubuntu; }
+          .prices-box .price div:last-of-type span {
+            font: bold 2rem/100% red_sparrow-ubuntu; }
+    .prices-box .btn {
+      margin-top: 40px; }
+      .prices-box .btn button {
+        display: block;
+        margin: 0 auto;
+        color: #fff;
+        background: #bb0000;
+        font: bold 1rem/100% red_sparrow-ubuntu;
+        text-transform: uppercase;
+        border-radius: 100px;
+        padding: 10px 25px;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        transition: 0.3s; }
+        .prices-box .btn button:hover {
+          color: #bb0000;
+          background: #fff; }
+
+.faq-title {
+  padding: 20px 25px;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
+  font: bold 1.2rem/100% red_sparrow-ubuntu;
+  text-transform: uppercase;
+  cursor: pointer; }
+  @media screen and (max-width: 980px) {
+    .faq-title {
+      font-size: 1rem;
+      line-height: 1.5rem; } }
+  @media screen and (max-width: 480px) {
+    .faq-title {
+      font-size: 0.8rem;
+      line-height: 1.2rem; } }
+  .faq-title i {
+    pointer-events: none;
+    margin-right: 10px; }
+.faq-content {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.6s;
+  -moz-transition: height 0.6s;
+  -ms-transition: height 0.6s;
+  transition: height 0.6s; }
+  .faq-content ul {
+    padding: 20px 60px;
+    font: 500 1rem/150% red_sparrow-ubuntu; }
+    @media screen and (max-width: 980px) {
+      .faq-content ul {
+        padding: 20px 20px; } }
+    .faq-content ul li {
+      margin-bottom: 15px;
+      padding-left: 10px; }
+      .faq-content ul li:first-of-type {
+        margin-bottom: 0;
+        padding-left: 0; }
+      .faq-content ul li:nth-of-type(2) {
+        margin: 30px 0;
+        padding-left: 0;
+        font: bold 1rem/100% red_sparrow-ubuntu; }
+      .faq-content ul li:last-of-type {
+        margin-bottom: 0; }
+      .faq-content ul li i {
+        margin-right: 10px; }
+
+/*# sourceMappingURL=style.css.map */

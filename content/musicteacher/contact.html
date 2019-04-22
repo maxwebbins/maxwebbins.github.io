@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sheet music</title>
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<div class="wrapper row-fluid"> 
+<div class="col_12">
+	
+	<div class="row-fluid"> 
+		<div class="navigation col_1"> <!--======NAVIGATION BEGIN=========-->
+			<div class="navigation-photo">
+				<img src="icons/avatar.jpg" alt="me">
+			</div>
+			<div class="navigation-name">
+				<p>John Doe</p>
+			</div>
+			<a href="index.html" class="navigation-home">
+
+				<span class="navigation-icons"></span>
+				<p>home</p>
+		
+			</a>
+			<a href="about.html" class="navigation-about">
+
+				<span class="navigation-icons"></span>
+				<p>about</p>
+		
+			</a>
+			<a href="songs.html" class="navigation-songs">
+
+				<span class="navigation-icons"></span>
+				<p>my songs</p>
+		
+			</a>
+			<a href="sheetmusic.html" class="navigation-sheet">
+
+				<span class="navigation-icons"></span>
+				<p>sheet music</p>
+		
+			</a>
+			<a href="contact.html" class="navigation-contact active">
+
+				<span class="navigation-icons"></span>
+				<p>contact</p>
+		
+			</a>
+
+			<div class="navigation-about-social">
+
+				<a href="javascript:undefined;" class="social-icons-f"></a>
+				<a href="javascript:undefined;" class="social-icons-t"></a>
+				<a href="javascript:undefined;" class="social-icons-s"></a>
+				<a href="javascript:undefined;" class="social-icons-d"></a>
+
+			</div>
+		</div> <!--======NAVIGATION END=========-->
+
+		<div class="maincontent col_11"> <!--======MAINCONTENT BEGIN=========-->
+
+			<div class="row-fluid maincontent-container"> <!--======MAINCONTEINER BEGIN=========-->
+				<div class="col_12">
+					
+					<div class="common-head">
+						<h3 class="common-title">contact</h3>
+						<h5 class="common-subtitle">where you can find me</h5>
+						<div class="common-hr">
+							<hr>
+							<span></span>
+						</div>
+					</div>
+
+					<div class="contact row-fluid"> <!--======CONTACT BEGIN=========-->
+						<div class="contact-form col_6">
+
+							<form action="contact.html" method="post">
+								<div class="contact-form-wrappers contact-form-name">
+									<input type="text" name="contact_name" placeholder="Name" title="Must contain 3-12 characters">
+									<div class="contact-form-tooltip">
+										<ul>
+											<li>- Only letters allowed</li>
+											<li>- Must contain 3-12 characters</li>
+										</ul> 
+									</div>
+								</div>
+								<div class="contact-form-wrappers contact-form-email">
+									<input type="text" name="contact_email" placeholder="Email" pattern="/[0-9a-z_-]+@[0-9a-z_-]+\.[a-z]{2,5}/i">
+									<div class="contact-form-tooltip">
+										<ul>
+											<li>- Use valid email</li>
+											<li>- Verifying letter will be sent</li>
+										</ul> 
+									</div>
+								</div>
+								<div class="contact-form-wrappers contact-form-phone">
+									<input type="text" name="contact_phone" placeholder="Phone ( xxx ) xxx - xxxx">
+									<div class="contact-form-tooltip">
+										<ul>
+											<li>- Use valid phone number</li>
+											<li>- Phone number is optional</li>
+										</ul>
+									</div>
+								</div>
+								<textarea name="contact_msg" placeholder="Message"></textarea>
+								<input class="common-bold" type="button" value="send">
+							</form>
+
+							<div class="contact-form-fairy-box clearfix">							
+								<div class="contact-form-fairy-msg">
+									<p></p>
+								</div>
+								<div class="contact-form-fairy-img"><img src="icons/fairy.png" alt="fairy"></div>
+							</div>
+
+						</div>
+
+						<div class="contact-info clearfix col_6">
+
+							<div class="contact-info-section odd">
+								<ul>
+									<li class="contact-info-title">adress</li>
+									<li class="contact-info-img"><img src="icons/mappoint.png" alt="point"></li>
+									<li class="contact-info-text">22 W 21st St, New York</li>
+								</ul>
+							</div>
+
+							<div class="contact-info-section">
+								<ul>
+									<li class="contact-info-title">phone</li>
+									<li class="contact-info-img"><img src="icons/phone.png" alt="point"></li>
+									<li class="contact-info-text">+7 (555)555-5555</li>
+								</ul>
+							</div>
+
+							<div class="contact-info-section odd">
+								<ul>
+									<li class="contact-info-title">email</li>
+									<li class="contact-info-img"><img src="icons/letterbox.png" alt="point"></li>
+									<li class="contact-info-text">john_d0e@gmail.com</li>
+								</ul>
+							</div>
+
+							<div class="contact-info-section">
+								<ul>
+									<li class="contact-info-title">skype</li>
+									<li class="contact-info-img"><img src="icons/skype.png" alt="point"></li>
+									<li class="contact-info-text">john001</li>
+								</ul>
+							</div>
+
+						</div>
+					</div> <!--======CONTACT END=========-->
+					
+				</div>
+			</div> <!--======MAINCONTEINER END=========-->
+
+			<div class="map row-fluid">
+				<div class="col_12">
+					<img src="img/Map.jpg" alt="map">
+				</div>
+			</div>
+
+			<div class="maptext row-fluid">
+				<div class="col_12">
+					<p>Quisque mattis eget purus a aliquet. Nam tincidunt, ante ultricies imperdiet pellentesque, mi ipsum ornare enim, non tincidunt arcu enim sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam feugiat est efficitur eleifend venenatis. Sed odio turpis, iaculis eu vulputate ac, tincidunt a sapien. Phasellus vitae facilisis ligula, sit amet lobortis orci. Aliquam porttitor justo et vehicula tempus. Sed gravida venenatis lacus quis facilisis.</p>
+				</div>
+			</div>
+
+		</div> <!--======MAINCONTENT END=========-->
+	</div>
+
+	<div class="footer row-fluid">
+		<div class="col_12">
+			<p>© 1885 - 2018 All rights reserved. Developed by Noname</p>
+		</div>
+	</div>
+
+</div>
+</div>
+
+<script src="js/polyfill.js"></script>
+<script src="js/js.js"></script>
+<script src="js/contactForm.js"></script>
+</body>
+</html>
