@@ -65,7 +65,6 @@
 	}
 
 	function scrollSuspend(time) {
-		console.log('hui');
 		setTimeout(() => scrollSuspended = false, time);
 	}
 
@@ -80,12 +79,10 @@
 			scrollMul = sliderSlides.length - 1;
 			menuItems[scrollMul].classList.add('active');
 			sliderContent.style.transform = `translate3d(0,${-scrollMul*100}%,0)`;
-			console.log(scrollMul);
 		} else {
 			scrollMul--;
 			menuItems[scrollMul].classList.add('active');
 			sliderContent.style.transform = `translate3d(0,${-scrollMul*100}%,0)`;
-			console.log(scrollMul);	
 		}
 
 		scrollSuspended = true;
