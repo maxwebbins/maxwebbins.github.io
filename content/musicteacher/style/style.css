@@ -1,5 +1,5 @@
 * {margin: 0; padding: 0;}
-body {font: 1.125rem/1.125rem MuseoSansCyrl500, Arial, sans-serif; color: #656565;}
+body {font: 1.125rem/1.125rem MuseoSansCyrl500, Arial, sans-serif; color: #656565; overflow-x: hidden;}
 div {-webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
 box-sizing: border-box;}
