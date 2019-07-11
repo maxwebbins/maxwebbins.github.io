@@ -45,25 +45,21 @@ $(function() {
  		$('.video-modal iframe').attr('src', $('.video-modal iframe').attr('src'));
  	});
 
-	$('.slider_1').bxSlider({
-	    mode: 'fade',
-	    auto: true,
-	    pause: 6000,
-	    autoHover: true,
-	    adaptiveHeight: true,
-	    captions: false,
-	    nextText: '',
-	    prevText: '',
-	    pager: false
-  	});
+	$('.slider_1').owlCarousel({
+		items: 1,
+		dots: false,
+		nav: true,
+		loop: true,
+		smartSpeed: 500
+	});
 
-  	$('.slider_2').bxSlider({
-	    mode: 'fade',
-	    startSlide: 1,
-	    captions: true,
-	    nextText: '',
-	    prevText: '',
-	    pager: true
-  	});
+	$('.slider_2').bxSlider({
+		mode: 'fade',
+		startSlide: 1,
+		captions: true,
+		nextText: '',
+		prevText: '',
+		pager: true
+	});
 
 });
