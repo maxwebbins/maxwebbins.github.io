@@ -328,7 +328,9 @@
  });
 
  document.body.onload = function(){
+		var preloader = document.getElementById('preloader-main');
+		preloader.classList.add('loaded');
  	setTimeout(function(){
- 		document.getElementById('preloader-main').classList.add('loaded');
- 	}, 200);
+		preloader.hidden = 'true';
+ 	}, 300);
  }
